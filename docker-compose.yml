@@ -11,7 +11,7 @@ services:
       - mongo_data:/data/db
 
   backend:
-    build: ./backend
+    image: sncharanraj/dd-backend:v1
     container_name: backend
     restart: always
     environment:
@@ -22,7 +22,7 @@ services:
       - mongodb
 
   frontend:
-    build: ./frontend
+    image: sncharanraj/dd-frontend:v1
     container_name: frontend
     restart: always
     ports:
